@@ -1,0 +1,2 @@
+node swa.js
+pause
