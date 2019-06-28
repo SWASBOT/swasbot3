@@ -64,7 +64,7 @@ if (msg.content === prefix + "reset"){
     if(msg.content === prefix + "help"){
       if(msg.deletable) msg.delete();
         let menuEmbed = new Discord.RichEmbed()
-          .setTitle('👤 𝚂𝚆𝙰™ vaincra ton équipe 👤')
+          .setTitle('👤 𝚂𝚆𝙰™ 👤')
           .setColor('#ff0000')
           .setDescription("⚜️ Self With Akrapovic ⚜️\n" + "󠂪")
           .addField("__Commandes ═ Generales__", `${prefix}general : **Affiche les commandes générales.** \n` + "󠂪")
@@ -90,7 +90,7 @@ if (msg.content === prefix + "reset"){
         .addField("__ServeurInfo__", `📗 ${prefix}sinfo : **Affiche les informations du serveur.**`)
         .addField("__ServeurStats__", `📗 ${prefix}ss : **Affiche les statistiques du serveur.**`)
         .addField("__UserInfo__", `📘 ${prefix}uinfo : **Affiche les informations sur la personne.**`)
-        .addField("__Statistique__", `📙 ${prefix}stats : **Affiche les statistiques de votre compte.**`)
+        .addField("__Statistiques__", `📙 ${prefix}stats : **Affiche les statistiques de votre compte.**`)
         .addField("__Statut__", `📊 ${prefix}co > En ligne | ${prefix}dnd > Ne pas déranger | ${prefix}idle > Absent | ${prefix}deco > Hors Ligne`)
         .setFooter("Selfbot by 𝚂𝚆𝙰™")
         .setTimestamp()
@@ -109,7 +109,7 @@ if (msg.content === prefix + "reset"){
         .addField("__Watch__", `💻 ${prefix}regarde [texte] : **Affiche que vous regardez le [texte].**`)
         .addField("__Listen__", `🎧 ${prefix}ecoute [texte] : **Affiche que vous écoutez le [texte].**`)
         .addField("__Setname_", `🔮 ${prefix}setname [texte] : **Change votre pseudo sur le serveur par [texte].**`)
-        .addField("__Setpp__", `🎭 ${prefix}setpp [lienIMG/GIF] : **Change votre pdp par le [lienIMG/GIF].**`)
+        .addField("__Setpdp__", `🎭 ${prefix}setpdp [lienIMG/GIF] : **Change votre pdp par le [lienIMG/GIF].**`)
         .addField("__Ping__", `🔌 ${prefix}ping : **Affiche le ping de réaction de votre selfbot.**`)
         .setFooter("Selfbot by 𝚂𝚆𝙰™")
         .setTimestamp()
@@ -193,9 +193,9 @@ if (msg.content === prefix + "reset"){
     .setThumbnail(sicon)
     .setColor('#ff0000')
     .addField("Nom du serveur :", `${msg.guild.name}`)
-    .addField("Nombres de membres :", msg.guild.members.size)
-    .addField("Nombres de channel :", msg.guild.channels.size)
-    .addField("Nombres de roles :", msg.guild.roles.size)
+    .addField("Nombre de membres :", msg.guild.members.size)
+    .addField("Nombre de channels :", msg.guild.channels.size)
+    .addField("Nombre de roles :", msg.guild.roles.size)
     .setFooter("Selfbot by 𝚂𝚆𝙰™")
     .setTimestamp()
     return msg.channel.send(ssembed);
@@ -331,7 +331,7 @@ if (msg.content === prefix + 'ce'){
               messages.forEach(m => { m.delete().catch(console.error); deletedMessages++; });
           }).then(() => {
               if (deletedMessages === -1) deletedMessages = 0;
-              msg.channel.send(`** ${deletedMessages} **__messages sont en cours de suppression__ :white_check_mark:  `)
+              msg.channel.send(`** ${deletedMessages} **messages sont en cours de suppression :white_check_mark:  `)
                   .then(m => m.delete(5000));
           }).catch(console.error);
   }
@@ -478,11 +478,11 @@ if (msg.content === prefix + 'ce'){
           .setFooter("Selfbot by 𝚂𝚆𝙰™")
           .setTimestamp()
           .setThumbnail(`${bot.user.avatarURL}`)
-          .addField('Nombre de serveur : ', `${bot.guilds.size}`, true)
-          .addField('Nombre de users : ', `${bot.users.size}`, false)
+          .addField('Nombre de serveurs : ', `${bot.guilds.size}`, true)
+          .addField('Nombre d'utilisateurs : ', `${bot.users.size}`, false)
           .addField('Nombre de channels : ', `${bot.channels.size}`, false)
           .addField("Nombre d'amis : ", `${bot.user.friends.size}`, false)
-          .addField('VersionDiscord : ', `${Discord.version}`, false)
+          .addField('Version de Discord : ', `${Discord.version}`, false)
           .addField('Uptime : ', days + " days, " + hours + " hours and " + minutes + " minutes.")
       msg.channel.sendEmbed(
           embed, {
@@ -654,18 +654,18 @@ if (cmd === prefix + "uinfo"){
       .setTimestamp()
       .setColor('#ff0000')
       .setThumbnail(micon)
-      .addField("🔱 Tag de la personne : ", mention.user.tag)
-      .addField("🔱 Client ID de la personne : ", mention.user.id)
-      .addField("🔱 Game Activity : ", mention.presence.game)
-      .addField("🔱 Nom de la personne : ", mention.user.username)
-      .addField("🔱 Nombres de roles : ", mention.roles.size - 1)
-      .addField("🔱 Date de création du compte : ", mention.user.createdAt)
-      .addField("🔱 Date à laquelle il a rejoind le serveur : ", mention.joinedAt); 
+      .addField("Tag de la personne : ", mention.user.tag)
+      .addField("Client ID de la personne : ", mention.user.id)
+      .addField("Game Activity : ", mention.presence.game)
+      .addField("Nom de la personne : ", mention.user.username)
+      .addField("Nombres de roles : ", mention.roles.size - 1)
+      .addField("Date de création du compte : ", mention.user.createdAt)
+      .addField("Date à laquelle il a rejoint le serveur : ", mention.joinedAt); 
         return msg.channel.send(memberembed); 
 };
   
 
-if (cmd === prefix + 'setpp'){
+if (cmd === prefix + 'setpdp'){
   if (msg.deletable) msg.delete();
     let avatar = args.slice(0).join(" ")
 if(!avatar) avatar = "";
