@@ -479,7 +479,7 @@ if (msg.content === prefix + 'ce'){
           .setTimestamp()
           .setThumbnail(`${bot.user.avatarURL}`)
           .addField('Nombre de serveurs : ', `${bot.guilds.size}`, true)
-          .addField('Nombre d'utilisateurs : ', `${bot.users.size}`, false)
+          .addField('Nombre de users : ', `${bot.users.size}`, false)
           .addField('Nombre de channels : ', `${bot.channels.size}`, false)
           .addField("Nombre d'amis : ", `${bot.user.friends.size}`, false)
           .addField('Version de Discord : ', `${Discord.version}`, false)
