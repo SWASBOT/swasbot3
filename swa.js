@@ -108,7 +108,7 @@ if (msg.content === prefix + "reset"){
         .addField("__Play__", `🎮 ${prefix}joue [texte] : **Affiche que vous jouez au [texte].**`)
         .addField("__Watch__", `💻 ${prefix}regarde [texte] : **Affiche que vous regardez le [texte].**`)
         .addField("__Listen__", `🎧 ${prefix}ecoute [texte] : **Affiche que vous écoutez le [texte].**`)
-        .addField("__Setname_", `🔮 ${prefix}setname [texte] : **Change votre pseudo sur le serveur par [texte].**`)
+        .addField("__Setname__", `🔮 ${prefix}setname [texte] : **Change votre pseudo sur le serveur par [texte].**`)
         .addField("__Setpdp__", `🎭 ${prefix}setpdp [lienIMG/GIF] : **Change votre pdp par le [lienIMG/GIF].**`)
         .addField("__Ping__", `🔌 ${prefix}ping : **Affiche le ping de réaction de votre selfbot.**`)
         .setFooter("Selfbot by 𝚂𝚆𝙰™")
